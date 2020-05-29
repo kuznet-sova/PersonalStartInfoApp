@@ -32,8 +32,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButton() {
-        showAllert(with: "Invalid username or password.",
-                   and: "Please, enter the correct username and password.")
+//        showAllert(with: "Invalid username or password.",
+//                   and: "Please, enter the correct username and password.")
     }
     @IBAction func forgotUsernameButton() {
         showAllert(with: "I'll help you remember 🧙🏼",
