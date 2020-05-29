@@ -8,14 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.usernameTextFild.delegate = self
+    }
 
     @IBAction func usernameFild() {
     }
@@ -28,5 +29,15 @@ class ViewController: UIViewController {
     }
     @IBAction func forgetPasswordButton() {
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.nextTextField(textField)
+        return true
+    }
+    
+    private func nextTextField(_ textField: UITextField) {
+        if (self.usernameTextFild != nil) {
+            self.passwordTextFild.becomeFirstResponder()
+        }
+    }
 }
-
