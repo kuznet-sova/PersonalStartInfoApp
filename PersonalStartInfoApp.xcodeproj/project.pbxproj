@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C6A5BA82481CE49000B1B19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A5BA72481CE49000B1B19 /* User.swift */; };
 		8CD8B1E524805A71004B4763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD8B1E424805A71004B4763 /* AppDelegate.swift */; };
 		8CD8B1E724805A71004B4763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD8B1E624805A71004B4763 /* SceneDelegate.swift */; };
 		8CD8B1E924805A71004B4763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD8B1E824805A71004B4763 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C6A5BA72481CE49000B1B19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8CD8B1E124805A71004B4763 /* PersonalStartInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalStartInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CD8B1E424805A71004B4763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CD8B1E624805A71004B4763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C6A5BA22481C97B000B1B19 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8B1E824805A71004B4763 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8C6A5BA32481C9FD000B1B19 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8C6A5BA72481CE49000B1B19 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8C6A5BA42481CA41000B1B19 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8B1EA24805A71004B4763 /* Main.storyboard */,
+				8CD8B1EF24805A77004B4763 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C6A5BA52481CAFE000B1B19 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8B1E424805A71004B4763 /* AppDelegate.swift */,
+				8CD8B1E624805A71004B4763 /* SceneDelegate.swift */,
+				8CD8B1F224805A77004B4763 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8C6A5BA62481CB63000B1B19 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				8CD8B1ED24805A77004B4763 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
 		8CD8B1D824805A71004B4763 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +101,11 @@
 		8CD8B1E324805A71004B4763 /* PersonalStartInfoApp */ = {
 			isa = PBXGroup;
 			children = (
-				8CD8B1E424805A71004B4763 /* AppDelegate.swift */,
-				8CD8B1E624805A71004B4763 /* SceneDelegate.swift */,
-				8CD8B1E824805A71004B4763 /* ViewController.swift */,
-				8CD8B1EA24805A71004B4763 /* Main.storyboard */,
-				8CD8B1ED24805A77004B4763 /* Assets.xcassets */,
-				8CD8B1EF24805A77004B4763 /* LaunchScreen.storyboard */,
-				8CD8B1F224805A77004B4763 /* Info.plist */,
+				8C6A5BA22481C97B000B1B19 /* ViewControllers */,
+				8C6A5BA32481C9FD000B1B19 /* Models */,
+				8C6A5BA42481CA41000B1B19 /* Storyboards */,
+				8C6A5BA52481CAFE000B1B19 /* SupportingFiles */,
+				8C6A5BA62481CB63000B1B19 /* Sourse */,
 			);
 			path = PersonalStartInfoApp;
 			sourceTree = "<group>";
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6A5BA82481CE49000B1B19 /* User.swift in Sources */,
 				8CD8B1E924805A71004B4763 /* ViewController.swift in Sources */,
 				8CD8B1E524805A71004B4763 /* AppDelegate.swift in Sources */,
 				8CD8B1E724805A71004B4763 /* SceneDelegate.swift in Sources */,
@@ -286,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G39AAW7HHA;
-				INFOPLIST_FILE = PersonalStartInfoApp/Info.plist;
+				INFOPLIST_FILE = PersonalStartInfoApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G39AAW7HHA;
-				INFOPLIST_FILE = PersonalStartInfoApp/Info.plist;
+				INFOPLIST_FILE = PersonalStartInfoApp/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
