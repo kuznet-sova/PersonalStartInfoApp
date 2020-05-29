@@ -13,11 +13,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameTextFild.delegate = self
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if touches.first != nil {
+            view.endEditing(true)
+        }
+        super.touchesBegan(touches, with: event)
+    }
 
+    
     @IBAction func usernameFild() {
     }
     @IBAction func passwordFild() {
@@ -36,7 +44,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                    and: "Your password is 12345")
     }
     
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.usernameTextFild.resignFirstResponder()
         self.nextTextField(textField)
         return true
     }
