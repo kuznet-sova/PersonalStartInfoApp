@@ -24,10 +24,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButton() {
+        showAllert(with: "Invalid username or password.",
+                   and: "Please, enter the correct username and password.")
     }
     @IBAction func forgotUsernameButton() {
+        showAllert(with: "I'll help you remember 🧙🏼",
+                   and: "Your name is Admin")
     }
     @IBAction func forgetPasswordButton() {
+        showAllert(with: "🔐",
+                   and: "Your password is 12345")
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -39,5 +45,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if (self.usernameTextFild != nil) {
             self.passwordTextFild.becomeFirstResponder()
         }
+    }
+}
+
+//  MARK: - UIAlertController
+extension ViewController {
+    private func showAllert(with title: String, and message: String) {
+        let allert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
+            self.usernameTextFild.text = ""
+            self.passwordTextFild.text = ""
+        }
+        allert.addAction(okAction)
+        present(allert, animated: true)
     }
 }
