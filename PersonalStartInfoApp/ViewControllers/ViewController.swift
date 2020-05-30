@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         super.touchesBegan(touches, with: event)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loginSegue" {
+            guard let userDetailsVC = segue.destination as? UserDetailsViewController
+                else { return }
+            userDetailsVC.userName =  sender as? String
+        }
+    }
 
     
     @IBAction func usernameFild() {
@@ -32,8 +40,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func loginButton() {
-//        showAllert(with: "Invalid username or password.",
-//                   and: "Please, enter the correct username and password.")
+        if usernameTextFild.text == "Admin" &&
+            passwordTextFild.text == "12345" {
+            user = usernameTextFild.text!
+        } else {
+            showAllert(with: "Invalid username or password.",
+            and: "Please, enter the correct username and password.")
+        }
     }
     @IBAction func forgotUsernameButton() {
         showAllert(with: "I'll help you remember 🧙🏼",

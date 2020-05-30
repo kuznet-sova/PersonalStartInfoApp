@@ -43,7 +43,7 @@
                                                 <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8J-OL-xUS"/>
-                                                    <segue destination="ok3-Bc-aUG" kind="show" id="26v-6u-zY9"/>
+                                                    <segue destination="ok3-Bc-aUG" kind="show" identifier="loginSegue" id="26v-6u-zY9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -86,12 +86,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="629"/>
+            <point key="canvasLocation" x="791" y="618"/>
         </scene>
-        <!--View Controller-->
+        <!--User Details View Controller-->
         <scene sceneID="eKh-Qy-00Q">
             <objects>
-                <viewController id="3Nq-mo-q6P" sceneMemberID="viewController">
+                <viewController id="3Nq-mo-q6P" customClass="UserDetailsViewController" customModule="PersonalStartInfoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BN6-ym-MKd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
-                                            <segue destination="M9I-NX-Q4j" kind="presentation" modalPresentationStyle="fullScreen" id="Nmv-3u-gXh"/>
+                                            <segue destination="M9I-NX-Q4j" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="ipV-ty-6Gm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -144,10 +144,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="uFL-zd-diB"/>
                     <navigationItem key="navigationItem" id="8ds-E8-CFM"/>
+                    <connections>
+                        <outlet property="helloUsserLabel" destination="BTC-V9-b2X" id="Lbx-ST-B6h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3V-3H-MnC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2370" y="-181"/>
+            <point key="canvasLocation" x="2385" y="-185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lxn-ph-mem">
@@ -165,22 +168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2e-gV-pWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8" y="629"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="xR1-Rb-d4b">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jmV-Ri-yBl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rXc-dI-cEk" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="esb-wv-LEx"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Noy-K9-AEI">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                </tabBarController>
-            </objects>
-            <point key="canvasLocation" x="4905" y="-510.21126760563379"/>
+            <point key="canvasLocation" x="2" y="619"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5BF-gh-z8U">
@@ -189,6 +177,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="RBp-nk-oCu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m5u-nl-99C">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -198,7 +187,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCF-f5-Pa2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="-182"/>
+            <point key="canvasLocation" x="1599" y="-184"/>
         </scene>
     </scenes>
 </document>
