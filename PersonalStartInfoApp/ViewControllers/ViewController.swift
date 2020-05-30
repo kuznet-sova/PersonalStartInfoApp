@@ -18,6 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.usernameTextFild.delegate = self
+        self.passwordTextFild.delegate = self
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touches.first != nil {
@@ -44,6 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if usernameTextFild.text == "Admin" &&
             passwordTextFild.text == "12345" {
             helloUser = "Hello, \(usernameTextFild.text!)"
+            performSegue(withIdentifier: "loginSegue", sender: self)
         } else {
             showAllert(with: "Invalid username or password.",
             and: "Please, enter the correct username and password.")
@@ -62,6 +64,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.usernameTextFild.resignFirstResponder()
         self.nextTextField(textField)
+        if textField == passwordTextFild {
+            loginButton()
+        }
         return true
     }
     

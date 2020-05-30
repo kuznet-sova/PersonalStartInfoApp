@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="618"/>
+            <point key="canvasLocation" x="799" y="618"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ibm-6W-mgV">
@@ -96,38 +96,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Vd-bdJ">
-                                <rect key="frame" x="137" y="374" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="LUV-L0-y3L" kind="presentation" modalTransitionStyle="coverVertical" id="qTt-Qp-Vn6"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="glb-A8-N8y">
+                                <rect key="frame" x="36" y="163" width="248" height="242.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix5-rx-2FN">
+                                        <rect key="frame" x="0.0" y="0.0" width="248" height="119.5"/>
+                                        <string key="text">Not all creators like to talk about themselves. Therefore, friend, it is better to leave the search and perform the miracle yourself.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Vd-bdJ">
+                                        <rect key="frame" x="0.0" y="209.5" width="248" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Code is waiting you"/>
+                                        <connections>
+                                            <segue destination="LUV-L0-y3L" kind="presentation" modalTransitionStyle="coverVertical" id="qTt-Qp-Vn6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="glb-A8-N8y" firstAttribute="centerX" secondItem="Ggc-Hu-5yX" secondAttribute="centerX" id="Bo1-nb-Aa0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="glb-A8-N8y" secondAttribute="trailing" constant="20" id="SwY-0x-lvY"/>
+                            <constraint firstItem="glb-A8-N8y" firstAttribute="leading" secondItem="Ggc-Hu-5yX" secondAttribute="leadingMargin" constant="20" id="XC7-0l-0Mc"/>
+                            <constraint firstItem="glb-A8-N8y" firstAttribute="centerY" secondItem="Ggc-Hu-5yX" secondAttribute="centerY" id="g92-f4-1Ie"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5B3-gi-5eg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="info.circle" catalog="system" id="Uxe-IH-Bz9"/>
+                    <navigationItem key="navigationItem" id="BJe-vt-dBq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75m-lX-gPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2403.75" y="617.95774647887322"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish View Controller-->
         <scene sceneID="W5Z-Na-a9c">
             <objects>
-                <viewController id="LUV-L0-y3L" sceneMemberID="viewController">
+                <viewController id="LUV-L0-y3L" customClass="FinishViewController" customModule="PersonalStartInfoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o9M-0k-ndT">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KwH-Bb-q9l">
+                                <rect key="frame" x="36" y="50" width="248" height="448"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It'll be fun ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u14-4W-x5F">
+                                        <rect key="frame" x="71.5" y="0.0" width="105" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" image="ReplaceAll" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-QK-yju">
+                                        <rect key="frame" x="0.0" y="40" width="248" height="302"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrw-yc-UE3">
+                                        <rect key="frame" x="82.5" y="358" width="83" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Good luck!"/>
+                                        <connections>
+                                            <segue destination="ok3-Bc-aUG" kind="presentation" modalPresentationStyle="fullScreen" id="e1m-8a-Ptp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And you will need it, believe me 😈" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueB-Az-igw">
+                                        <rect key="frame" x="2" y="407" width="244" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KwH-Bb-q9l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="o9M-0k-ndT" secondAttribute="topMargin" constant="50" id="7vw-Oc-d86"/>
+                            <constraint firstItem="KwH-Bb-q9l" firstAttribute="centerX" secondItem="o9M-0k-ndT" secondAttribute="centerX" id="95I-xK-GlP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KwH-Bb-q9l" secondAttribute="trailing" constant="20" id="FkR-93-bOr"/>
+                            <constraint firstItem="KwH-Bb-q9l" firstAttribute="leading" secondItem="o9M-0k-ndT" secondAttribute="leadingMargin" constant="20" id="IrQ-zd-G8r"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="KwH-Bb-q9l" secondAttribute="bottom" constant="50" id="fU0-iM-CgK"/>
+                            <constraint firstItem="KwH-Bb-q9l" firstAttribute="centerY" secondItem="o9M-0k-ndT" secondAttribute="centerY" id="peJ-TW-uFs"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="7NZ-KI-h0F"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="bgq-QK-yju" id="yWs-L2-NrO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtS-RO-a83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3231" y="618"/>
+            <point key="canvasLocation" x="799" y="1419"/>
         </scene>
         <!--User Details View Controller-->
         <scene sceneID="eKh-Qy-00Q">
@@ -209,7 +270,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2e-gV-pWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="618"/>
+            <point key="canvasLocation" x="-32" y="618"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5BF-gh-z8U">
@@ -232,7 +293,11 @@
             <point key="canvasLocation" x="1598" y="618"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="26v-6u-zY9"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="ReplaceAll" width="1494" height="1494"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
     </resources>

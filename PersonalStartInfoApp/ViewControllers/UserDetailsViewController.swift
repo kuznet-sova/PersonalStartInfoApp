@@ -18,5 +18,4 @@ class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
         helloUsserLabel.text = userName
     }
-    
 }
