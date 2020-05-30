@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
-    var helloUser = "not found"
+    var helloUser = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
-            guard let userDetailsVC = segue.destination as? UserDetailsViewController
-                else { return }
+            guard let tabBar = segue.destination as? UITabBarController,
+            let userDetailsVC = tabBar.viewControllers?.first as? UserDetailsViewController
+            else { return }
             userDetailsVC.userName = helloUser
         }
     }

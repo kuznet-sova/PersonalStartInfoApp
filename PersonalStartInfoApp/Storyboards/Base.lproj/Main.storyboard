@@ -86,7 +86,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="618"/>
+            <point key="canvasLocation" x="769" y="618"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ibm-6W-mgV">
+            <objects>
+                <viewController id="rAl-7Q-bz8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ggc-Hu-5yX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNC-Vd-bdJ">
+                                <rect key="frame" x="137" y="374" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="LUV-L0-y3L" kind="presentation" modalTransitionStyle="coverVertical" id="qTt-Qp-Vn6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5B3-gi-5eg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="info.circle" catalog="system" id="Uxe-IH-Bz9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75m-lX-gPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2403.75" y="617.95774647887322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W5Z-Na-a9c">
+            <objects>
+                <viewController id="LUV-L0-y3L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o9M-0k-ndT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7NZ-KI-h0F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtS-RO-a83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3231" y="618"/>
         </scene>
         <!--User Details View Controller-->
         <scene sceneID="eKh-Qy-00Q">
@@ -127,7 +168,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
-                                            <segue destination="M9I-NX-Q4j" kind="presentation" identifier="logoutSegue" modalPresentationStyle="fullScreen" id="ipV-ty-6Gm"/>
+                                            <segue destination="M9I-NX-Q4j" kind="presentation" modalPresentationStyle="fullScreen" id="hUY-35-hRL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,7 +183,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qn6-cp-kI9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="uFL-zd-diB"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.crop.circle" catalog="system" id="uFL-zd-diB"/>
                     <navigationItem key="navigationItem" id="8ds-E8-CFM"/>
                     <connections>
                         <outlet property="helloUsserLabel" destination="BTC-V9-b2X" id="Lbx-ST-B6h"/>
@@ -150,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3V-3H-MnC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2385" y="-185"/>
+            <point key="canvasLocation" x="2404" y="-185"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lxn-ph-mem">
@@ -168,7 +209,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2e-gV-pWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="619"/>
+            <point key="canvasLocation" x="-43" y="618"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5BF-gh-z8U">
@@ -183,11 +224,16 @@
                     </tabBar>
                     <connections>
                         <segue destination="3Nq-mo-q6P" kind="relationship" relationship="viewControllers" id="Gy4-95-rfh"/>
+                        <segue destination="rAl-7Q-bz8" kind="relationship" relationship="viewControllers" id="w2A-rI-MNg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCF-f5-Pa2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1599" y="-184"/>
+            <point key="canvasLocation" x="1598" y="618"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
