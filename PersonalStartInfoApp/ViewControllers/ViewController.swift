@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
-    var user = ""
+    var helloUser = "not found"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if segue.identifier == "loginSegue" {
             guard let userDetailsVC = segue.destination as? UserDetailsViewController
                 else { return }
-            userDetailsVC.userName =  sender as? String
+            userDetailsVC.userName = helloUser
         }
     }
 
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButton() {
         if usernameTextFild.text == "Admin" &&
             passwordTextFild.text == "12345" {
-            user = usernameTextFild.text!
+            helloUser = "Hello, \(usernameTextFild.text!)"
         } else {
             showAllert(with: "Invalid username or password.",
             and: "Please, enter the correct username and password.")
