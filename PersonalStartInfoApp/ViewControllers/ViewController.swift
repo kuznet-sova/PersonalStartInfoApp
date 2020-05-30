@@ -34,18 +34,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             userDetailsVC.userName = helloUser
         }
     }
-
-    
-    @IBAction func usernameFild() {
-    }
-    @IBAction func passwordFild() {
-    }
     
     @IBAction func loginButton() {
         if usernameTextFild.text == "Admin" &&
             passwordTextFild.text == "12345" {
             helloUser = "Hello, \(usernameTextFild.text!)"
-            performSegue(withIdentifier: "loginSegue", sender: self)
         } else {
             showAllert(with: "Invalid username or password.",
             and: "Please, enter the correct username and password.")
@@ -65,6 +58,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.usernameTextFild.resignFirstResponder()
         self.nextTextField(textField)
         if textField == passwordTextFild {
+            performSegue(withIdentifier: "loginSegue", sender: self)
             loginButton()
         }
         return true
