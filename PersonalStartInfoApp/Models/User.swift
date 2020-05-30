@@ -9,12 +9,12 @@
 struct User {
     let username: String
     let pussword: String
-}
-
-extension User {
-    static func checkAutorisationInfo() -> [User] {
-        return [
-            User(username: "Admin", pussword: "12345")
-        ]
+    
+    init(
+        username: String = "Admin",
+        pussword: String = "12345"
+    ) {
+        self.username = username
+        self.pussword = pussword
     }
 }
