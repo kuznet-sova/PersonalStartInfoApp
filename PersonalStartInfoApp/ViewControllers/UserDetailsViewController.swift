@@ -12,10 +12,10 @@ class UserDetailsViewController: UIViewController {
 
     @IBOutlet var helloUsserLabel: UILabel!
     
-    var userName: String!
+    var userName: String = User().username
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helloUsserLabel.text = "Hello, \(userName!)"
+        helloUsserLabel.text = "Hello, \(userName)"
     }
 }

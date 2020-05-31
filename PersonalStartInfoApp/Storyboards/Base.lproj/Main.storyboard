@@ -37,7 +37,7 @@
                                                 <state key="normal" title="Login"/>
                                                 <connections>
                                                     <action selector="loginButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8J-OL-xUS"/>
-                                                    <segue destination="ok3-Bc-aUG" kind="show" identifier="loginSegue" id="26v-6u-zY9"/>
+                                                    <segue destination="ok3-Bc-aUG" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="26v-6u-zY9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
