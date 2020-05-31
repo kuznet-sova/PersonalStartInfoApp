@@ -16,6 +16,6 @@ class UserDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        helloUsserLabel.text = userName
+        helloUsserLabel.text = "Hello, \(userName!)"
     }
 }

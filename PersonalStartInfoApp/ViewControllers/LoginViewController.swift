@@ -8,37 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var usernameTextFild: UITextField!
     @IBOutlet var passwordTextFild: UITextField!
     
-    var helloUser = ""
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.usernameTextFild.delegate = self
-        self.passwordTextFild.delegate = self
+        usernameTextFild.delegate = self
+        passwordTextFild.delegate = self
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if touches.first != nil {
-            view.endEditing(true)
-        }
         super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loginSegue" {
             guard let tabBar = segue.destination as? UITabBarController,
             let userDetailsVC = tabBar.viewControllers?.first as? UserDetailsViewController
             else { return }
-            userDetailsVC.userName = helloUser
+            userDetailsVC.userName = User().username
         }
     }
     
     @IBAction func loginButton() {
         if usernameTextFild.text == User().username &&
             passwordTextFild.text == User().pussword {
-            helloUser = "Hello, \(usernameTextFild.text!)"
         } else {
             showAllert(with: "Invalid username or password.",
             and: "Please, enter the correct username and password.")
@@ -55,8 +50,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.usernameTextFild.resignFirstResponder()
-        self.nextTextField(textField)
+        usernameTextFild.resignFirstResponder()
+        nextTextField(textField)
         if textField == passwordTextFild {
             loginButton()
             performSegue(withIdentifier: "loginSegue", sender: self)
@@ -65,14 +60,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func nextTextField(_ textField: UITextField) {
-        if (self.usernameTextFild != nil) {
-            self.passwordTextFild.becomeFirstResponder()
+        if (usernameTextFild != nil) {
+            passwordTextFild.becomeFirstResponder()
         }
     }
 }
 
 //  MARK: - UIAlertController
-extension ViewController {
+extension LoginViewController {
     private func showAllert(with title: String, and message: String) {
         let allert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { _ in
